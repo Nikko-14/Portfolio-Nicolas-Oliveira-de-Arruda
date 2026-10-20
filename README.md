@@ -6,7 +6,7 @@ desenvolvidos durante meus estudos.
 
 ## Site publicado
 
-https://nikko-14.github.io/portfolio-Nicolas-Oliveira-de-Arruda/
+https://nikko-14.github.io/Portfolio-Nicolas-Oliveira-de-Arruda/
 
 ## Tecnologias utilizadas
 
