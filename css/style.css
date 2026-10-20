@@ -1,53 +1,259 @@
 
+b:root {
+    --fundo: #f6f7fb;
+    --card: #ffffff;
+    --texto: #1f2430;
+    --texto-suave: #5b6275;
+    --destaque: #4f46e5;
+    --destaque-escuro: #4038c7;
+    --borda: #e3e6ef;
+    --raio: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
     margin: 0;
-}
+    min-height: 100vh;
 
-header {
-    background-color: #247a62;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+    display: flex;
+    flex-direction: column;
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 10px;
-}
+    background: var(--fundo);
+    color: var(--texto);
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-main {
-    text-align: center;
-    padding: 60px 20px;
-}
-
-h2 {
-    color: #247a62;
-}
-
-p {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: var(--destaque);
+}
+
+a:focus-visible {
+    outline: 3px solid var(--destaque);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* ---- Cabeçalho ---- */
+.topo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 24px;
+
+    padding: 16px 24px;
+
+    background: var(--card);
+    border-bottom: 1px solid var(--borda);
+}
+
+.marca {
+    color: var(--texto);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.topo nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 8px;
+}
+
+.topo nav a {
+    padding: 6px 12px;
+
+    color: var(--texto-suave);
+    font-weight: 500;
+    text-decoration: none;
+
+    border-radius: 999px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.topo nav a:hover,
+.topo nav a[aria-current="page"] {
+    background: #eceafd;
+    color: var(--destaque);
+}
+
+/* ---- Conteúdo ---- */
+main {
+    flex: 1;
+
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 20px;
+}
+
+/* ---- Apresentação ---- */
+.apresentacao {
+    text-align: center;
+}
+
+.foto {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 4px solid var(--card);
+    box-shadow: 0 6px 20px rgba(31, 36, 48, 0.15);
+}
+
+.apresentacao h1 {
+    margin: 24px 0 8px;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.apresentacao p {
+    max-width: 480px;
+    margin: 0 auto 24px;
+
+    color: var(--texto-suave);
+    font-size: 1.1rem;
 }
 
 .botao {
     display: inline-block;
-    background-color: #3a9d7c;
-    color: white;
-    padding: 12px 18px;
-    border-radius: 6px;
+
+    padding: 12px 24px;
+
+    background: var(--destaque);
+    color: #ffffff;
+
+    font-weight: 600;
     text-decoration: none;
-    margin-top: 15px;
+
+    border-radius: 999px;
+    transition: background 0.2s, transform 0.2s;
 }
 
 .botao:hover {
-    background-color: #195c49;
+    background: var(--destaque-escuro);
+    transform: translateY(-2px);
+}
+
+/* ---- Contato ---- */
+.contato {
+    margin-top: 56px;
+    padding: 28px;
+
+    background: var(--card);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+
+    scroll-margin-top: 24px;
+}
+
+.contato h2 {
+    margin: 0 0 8px;
+    font-size: 1.4rem;
+}
+
+.contato > p {
+    margin: 0 0 16px;
+    color: var(--texto-suave);
+}
+
+.lista-contatos {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.lista-contatos li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 16px;
+
+    padding: 12px 0;
+
+    border-top: 1px solid var(--borda);
+}
+
+.lista-contatos span {
+    flex: 0 0 80px;
+
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.lista-contatos a {
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+/* ---- Rodapé ---- */
+.rodape {
+    padding: 20px;
+
+    text-align: center;
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+
+    border-top: 1px solid var(--borda);
+}
+
+.rodape p {
+    margin: 0;
+}
+
+/* ---- Celular ---- */
+@media (max-width: 600px) {
+    .topo {
+        justify-content: center;
+        text-align: center;
+    }
+
+    main {
+        padding: 32px 16px;
+    }
+
+    .apresentacao h1 {
+        font-size: 1.6rem;
+    }
+
+    .contato {
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    .lista-contatos span {
+        flex-basis: 100%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .botao,
+    .topo nav a {
+        transition: none;
+    }
 }
 
 .projeto {
