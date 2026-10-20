@@ -1,0 +1,93 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #247a62;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+h2 {
+    color: #247a62;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #3a9d7c;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.botao:hover {
+    background-color: #195c49;
+}
+
+.projeto {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.projeto a {
+    color: #247a62;
+}
+
+footer {
+    background-color: #247a62;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+#contato {
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+#contato h2 {
+    color: #247a62;
+}
+
+#contato a {
+    color: #247a62;
+    text-decoration: none;
+}
+
+#contato a:hover {
+    text-decoration: underline;
+}
