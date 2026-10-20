@@ -1,68 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>Meu Portfólio | Nicolas</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1>Meu Portfólio</h1>
+    <header class="topo">
+        <a class="marca" href="index.html">Meu Portfólio</a>
 
-        <nav>
-            <a href="index.html">Início</a>
+        <nav aria-label="Principal">
+            <a href="index.html" aria-current="page">Início</a>
             <a href="projetos.html">Projetos</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
 
     <main>
-        <h2>Olá, eu sou Nicolas!</h2>
 
-        <img src="img/foto.jpeg" alt="Foto do Nicolas" class="foto" width="300">
+        <section class="apresentacao">
+            <img src="img/foto.jpeg" alt="Foto Nicolas" class="foto" width="180" height="180">
 
-        <p>
-            Sou estudante e estou aprendendo programação
-            e desenvolvimento de sites.
-        </p>
+            <h1>Olá, eu sou Nicolas!</h1>
 
-        <a class="botao" href="/projetos/projetos.html">
-            Conheça meus projetos
-        </a>
+            <p>
+                Sou estudante e estou aprendendo programação
+                e desenvolvimento de sites.
+            </p>
+
+            <a class="botao" href="/projetos/projetos.html">Conheça meus projetos</a>
+        </section>
+
+        <section class="contato" id="contato" aria-labelledby="titulo-contato">
+            <h2 id="titulo-contato">Entre em contato</h2>
+
+            <p>Você pode entrar em contato comigo pelos links abaixo.</p>
+
+            <ul class="lista-contatos">
+                <li>
+                    <span>Email</span>
+                    <a href="mailto:nicolasarruda15@gmail.com">nicolasarruda15@gmail.com</a>
+                </li>
+
+                <li>
+                    <span>GitHub</span>
+                    <a href="https://github.com/Nikko-14" target="_blank" rel="noopener noreferrer">Meu GitHub</a>
+                </li>
+
+                <li>
+                    <span>LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/nicolas-arruda-390284400/" target="_blank"
+                        rel="noopener noreferrer">Meu LinkedIn</a>
+                </li>
+            </ul>
+        </section>
+
     </main>
 
-    <footer>
+    <footer class="rodape">
         <p>Meu Portfólio - 2026</p>
     </footer>
 
-    <section id="contato">
-    <h2>Entre em Contato</h2>
-
-    <p>Você pode entrar em contato comigo pelos links abaixo.</p>
-
-    <p>
-        Email:
-        <a href="mailto:nicolasarruda15@gmail.com">
-            nicolasarruda15@gmail.com
-        </a>
-    </p>
-
-    <p>
-        GitHub:
-        <a href="https://github.com/Nikko-14" target="_blank">
-            Meu GitHub
-        </a>
-    </p>
-
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/nicolas-arruda-390284400/"
-           target="_blank">
-            Meu LinkedIn
-        </a>
-    </p>
-</section>
 </body>
+
 </html>
